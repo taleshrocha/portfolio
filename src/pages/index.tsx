@@ -1,6 +1,7 @@
 import About from "@/components/About";
 import Front from "@/components/Front";
 import Header from "@/components/Header";
+import Knowledge from "@/components/Knowledge";
 import Head from "next/head";
 
 export default function Home() {
@@ -26,7 +27,7 @@ export default function Home() {
         <Front/>
 
         <About/>
-        <About/>
+        <Knowledge/>
       </main>
     </>
   );

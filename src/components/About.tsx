@@ -13,7 +13,6 @@ export default function About() {
           I study programing since 2020
         </p>
         <p>I'm interested in Front and Back-end development.</p>
-        <p>Here are somethings that I know:</p>
       </div>
     </div>
   );
