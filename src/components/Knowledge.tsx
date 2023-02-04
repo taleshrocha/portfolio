@@ -1,5 +1,6 @@
 import TechBanner from "./TechBanner";
 import {languages, tools} from "@/assets/knowledge"
+import Carousel, { CarrouselItem } from "./Carousel";
 
 export default function Knowledge() {
   return (
@@ -7,6 +8,20 @@ export default function Knowledge() {
       className="flex flex-col justify-between items-center
       z-10 relative h-full bg-gray-900 mt-6 py-10 px-5"
     >
+
+      <Carousel>
+        {languages.map((language) => (
+        <CarrouselItem>
+          <TechBanner
+            key={language.name}
+            name={language.name}
+            link={language.link}
+          >
+            <language.Icon className="h-14 w-14 sm:h-28 sm:w-28" size={100} />
+          </TechBanner>
+</CarrouselItem>
+        ))}
+      </Carousel>
 
       {/* Languages */}
       <h1 className="text-white font-bold text-xl">Languages</h1>
