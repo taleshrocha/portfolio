@@ -1,0 +1,47 @@
+{
+  "languages": {
+    {
+      "Icon": SiCplusplus,
+      "name": "C++",
+      "link": "",
+    },
+    {
+      "Icon": SiPython,
+      "name": "Python",
+      "link": "",
+    },
+    {
+      "Icon": SiJava,
+      "name": "Java",
+      "link": "",
+    },
+    {
+      "Icon": SiJavascript,
+      "name": "Javascript",
+      "link": "",
+    },
+  },
+  "tools": {
+    {
+      "Icon": SiNextdotjs,
+      "name": "Next.js",
+      "link": "",
+    },
+    {
+      "Icon": SiReact,
+      "name": "React",
+      "link": "",
+    },
+    {
+      "Icon": SiSpring,
+      "name": "Spring",
+      "link": "",
+    },
+    {
+      "Icon": SiTailwindcss,
+      "name": "TailwindCSS",
+      "link": "",
+    },
+  }
+
+}
