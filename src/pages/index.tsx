@@ -21,13 +21,15 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <main className="flex-col">
-        <Header/>
+      <main className="flex-col">
+        <Header />
 
-        <Front/>
+        <Front />
 
-        <About/>
-        <Knowledge/>
+        <div className="relative z-10 bg-gradient-to-r from-cyan-500 to-blue-500">
+          <About />
+          <Knowledge />
+        </div>
       </main>
     </>
   );

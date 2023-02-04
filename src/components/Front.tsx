@@ -10,7 +10,8 @@ export default function Front() {
   ];
   return (
     <div
-      className="flex sticky top-0 z-0 pt-24 w-full h-screen bg-sky-700
+      className="flex sticky top-0 z-0 pt-24 w-full h-screen 
+      bg-gradient-to-r from-cyan-500 to-blue-500 
       items-center justify-center"
     >
       <p className="text-center text-white text-5xl md:text-7xl whitespace-pre font-semibold">

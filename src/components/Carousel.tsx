@@ -1,50 +1,53 @@
 import React, { useEffect, useState } from "react";
 
-export function CarrouselItem({ children, width }: any) {
+export function CarrouselItem({ children, width, height }: any) {
   return (
-    <div className="carousel-item" style={{ width: width }}>
+    <div
+        className="inline-flex items-center justify-center"
+      style={{ width: width, height: height}}
+    >
       {children}
     </div>
   );
 }
 
 // TODO: Add swipe "react-swipeable"
-export default function Carousel({ children }: any) {
+export default function Carousel({ children, time }: any) {
   const [activeIndex, setActiveIndex] = useState(0);
-  const [isPaused, setIsPaused] = useState(false)
+  const [isPaused, setIsPaused] = useState(false);
 
-  function mod(n:number, m:number) {
-    return ((n % m) + m) % m
+  function mod(n: number, m: number) {
+    return ((n % m) + m) % m;
   }
 
   function updateIndex(newIndex: number) {
     setActiveIndex(mod(newIndex, React.Children.count(children)));
-    console.log(activeIndex);
   }
 
   useEffect(() => {
     const interval = setInterval(() => {
-      if(!isPaused) updateIndex(activeIndex + 1)
-    }, 1000)
+      if (!isPaused) updateIndex(activeIndex + 1);
+    }, time);
     return () => {
-      if (interval) clearInterval(interval)
-    }
-  })
+      if (interval) clearInterval(interval);
+    };
+  });
 
   return (
-    <div className="carousel"
+    <div
+      className="overflow-hidden max-w-xs"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       <div
-        className="inner"
-        style={{ transform: `translateX(-${Math.abs(activeIndex) * 100}%)` }}
+        className="whitespace-nowrap transition-transform duration-700"
+        style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
         {React.Children.map(children, (child, index) => {
           return React.cloneElement(child, { width: "100%" });
         })}
       </div>
-      <div className="indicators">
+      <div className="flex justify-center space-x-2 hidden">
         <button
           onClick={() => {
             updateIndex(activeIndex - 1);
@@ -55,7 +58,7 @@ export default function Carousel({ children }: any) {
         {React.Children.map(children, (child, index) => {
           return (
             <button
-              className={`${index === Math.abs(activeIndex) ? "active" : ""}`}
+              className={`${index === activeIndex && "bg-sky-500 text-white"}`}
               onClick={() => {
                 updateIndex(index);
               }}
