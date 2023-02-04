@@ -20,8 +20,9 @@ export default function About() {
       <div className="">
         <h1 className="font-bold text-2xl text-white text-center">Hello, there 👋</h1>
         <p className="text-gray-300">
-          I'm a programer living in Brazil. I study programing in collage since 
-          2020 at IMD and I'm passionate about Front and Back-end web development.
+          I'm Tales Rocha, a passionate programer actually living in Brazil.
+          I study programing since 2020 and I'm interested in all about Front 
+          and Back-end web development. I'm also an undergraduate in IT at IMD.
         </p>
         <h1 className="font-semibold text-xl">
           {"Fun fact: "}

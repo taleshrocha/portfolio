@@ -5,14 +5,6 @@ import Knowledge from "@/components/Knowledge";
 import Head from "next/head";
 
 export default function Home() {
-  //<p>I love to read and I'am learning to play guitar. I also like pizza, but I'm lactose intolerant (didin't ask for that!)</p>
-  //<p>I like to use fancy editors. Like Vim, though I'm still not mature enought to Emacs.</p>
-
-  //<p>Some fun facts</p>
-  //<p>
-  //  I'am reading Game of Thrones
-  //  I have lactose intolerance
-  //</p>
   return (
     <>
       <Head>

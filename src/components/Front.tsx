@@ -4,8 +4,6 @@ export default function Front() {
   const texts = [
     "Tales Rocha.",
     "a programer.",
-    "a humam.",
-    "Tales Rocha.",
     "a developer.",
   ];
   return (

@@ -8,12 +8,15 @@ export default function Knowledge() {
       className="flex justify-center items-center
       z-10 relative h-full bg-gray-900 mt-6 py-10 px-5 space-x-8"
     >
-      <h1>I'm always pushing to learn new things. Those are some 
-        technologies that I'm able to use</h1>
+      <h1 className="text-white text-xl">
+        I'm always pushing to learn new things and improve my 
+        development abilities. <br/>
+        Here are some of the technologies that I'm currently able work with.
+      </h1>
       {/*Sliders*/}
       <div>
       {/* Languages */}
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center space-y-4">
         <h1 className="text-white font-bold text-xl">Languages</h1>
         <Carousel
           time={1500}
@@ -36,8 +39,9 @@ export default function Knowledge() {
           ))}
         </Carousel>
       </div>
+
       {/* Tools */}
-      <div className="flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center space-y-4">
         <h1 className="text-white font-bold text-xl">Tools</h1>
         <Carousel
           time={2000}
