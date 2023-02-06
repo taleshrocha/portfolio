@@ -37,14 +37,18 @@ export default function MenuCarousel({ children, time, className, descriptions }
   return (
     <div
       className="
-        flex relative overflow-hidden w-max
+        flex relative items-center overflow-hidden w-max
         bg-gray-800 py-2 
       "
     >
       {/*Mobile*/}
-      <div className="flex absolute inset-0 items-center justify-center text-black z-10">
-        <button onClick={() => updateIndex(activeIndex + 1)}><ArrowLeft /></button>
-        <button onClick={() => updateIndex(activeIndex - 1)}><ArrowRight /></button>
+      <div className="flex absolute inset-0 items-end justify-center text-gray-900 z-10 space-x-24 mb-16">
+        <button 
+          className="p-4 transition-colors duration-300 ease-out hover:bg-gray-600/50 rounded-full"
+          onClick={() => updateIndex(activeIndex + 1)}><ArrowLeft size={30}/></button>
+        <button 
+          className="p-4 transition-colors duration-300 ease-out hover:bg-gray-600/50 rounded-full"
+          onClick={() => updateIndex(activeIndex - 1)}><ArrowRight size={30} /></button>
       </div>
 
       {/*Left side*/}
