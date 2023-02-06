@@ -11,8 +11,14 @@ export function CarrouselItem({ children, width, height }: any) {
   );
 }
 
+interface CarouselProps {
+  children: any
+  time: number
+  className: string
+}
+
 // TODO: Add swipe "react-swipeable"
-export default function Carousel({ children, time }: any) {
+export default function Carousel({ children, time, className }: CarouselProps) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -35,7 +41,7 @@ export default function Carousel({ children, time }: any) {
 
   return (
     <div
-      className="overflow-hidden max-w-xs"
+      className={`overflow-hidden py-2 ${className}`}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >

@@ -18,7 +18,7 @@ export default function Front() {
       >
         {"Hello world!\nI'm "}
         <Typewriter
-          className="blinking-cursor text-purple-400 !font-bold"
+          className="blinking-cursor text-purple-400 !font-bold break-all"
           baseTexts={["Tales Rocha.", "a programer.", "a developer."]}
           loop={true}
           typeSpeed={100}
