@@ -3,9 +3,13 @@ import { AiFillGithub } from "react-icons/ai";
 export default function Header() {
   return (
     <div
-      className="flex fixed top-0 z-50 bg-black/50 w-full h-10 md:h-14 
-        backdrop-blur-lg items-center justify-between px-16 
-      text-white text-sm md:text-lg"
+      className="
+      flex fixed top-0 z-50 items-center justify-between
+      bg-black/50 backdrop-blur-lg text-white
+      w-full 
+      h-8 text-sm px-4 
+      md:h-12 md:text-base
+      "
     >
       <p>
         TALES <span className="font-bold">ROCHA</span>
