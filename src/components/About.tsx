@@ -1,3 +1,4 @@
+import Section from "./Section";
 import Typewriter from "./Typewriter";
 
 export default function About() {
@@ -8,21 +9,20 @@ export default function About() {
     "I'm Brazilian.",
   ];
   return (
-    <div
-      className="flex items-center flex-col md:flex-row 
-      z-10 relative h-full bg-gray-900 text-white"
-    >
+    <Section>
       <img
         className="rounded-full w-52 mt-8 border-4 border-sky-700"
         src="https://avatars.githubusercontent.com/u/61332391?v=4"
         alt=""
       />
       <div className="">
-        <h1 className="font-bold text-2xl text-white text-center">Hello, there 👋</h1>
+        <h1 className="font-bold text-2xl text-white text-center">
+          Hello, there 👋
+        </h1>
         <p className="text-gray-300">
-          I'm Tales Rocha, a passionate programer actually living in Brazil.
-          I study programing since 2020 and I'm interested in all about Front 
-          and Back-end web development. I'm also an undergraduate in IT at IMD.
+          I'm Tales Rocha, a passionate programer actually living in Brazil. I
+          study programing since 2020 and I'm interested in all about Front and
+          Back-end web development. I'm also an undergraduate in IT at IMD.
         </p>
         <h1 className="font-semibold text-xl">
           {"Fun fact: "}
@@ -37,6 +37,6 @@ export default function About() {
           />
         </h1>
       </div>
-    </div>
+    </Section>
   );
 }

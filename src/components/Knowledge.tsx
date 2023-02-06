@@ -1,13 +1,11 @@
 import TechBanner from "./TechBanner";
 import { languages, tools } from "@/assets/knowledge";
 import Carousel, { CarrouselItem } from "./Carousel";
+import Section from "./Section";
 
 export default function Knowledge() {
   return (
-    <div
-      className="flex justify-center items-center
-      z-10 relative h-full bg-gray-900 mt-6 py-10 px-5 space-x-8"
-    >
+    <Section>
       <h1 className="text-white text-xl">
         I'm always pushing to learn new things and improve my 
         development abilities. <br/>
@@ -59,6 +57,6 @@ export default function Knowledge() {
       </div>
         
       </div>
-    </div>
+    </Section>
   );
 }

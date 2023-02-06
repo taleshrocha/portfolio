@@ -1,22 +1,25 @@
 import Typewriter from "./Typewriter";
 
 export default function Front() {
-  const texts = [
-    "Tales Rocha.",
-    "a programer.",
-    "a developer.",
-  ];
   return (
     <div
-      className="flex sticky top-0 z-0 pt-24 w-full h-screen 
-      bg-gradient-to-r from-cyan-500 to-blue-500 
-      items-center justify-center"
+      className="
+        flex sticky top-0 z-0 items-center justify-center
+        bg-gradient-to-r from-cyan-500 to-blue-500 
+        w-full h-screen pt-24 
+      "
     >
-      <p className="text-center text-white text-5xl md:text-7xl whitespace-pre font-semibold">
+      <p
+        className="
+          text-center text-white whitespace-pre font-semibold
+          text-3xl 
+          md:text-7xl 
+        "
+      >
         {"Hello world!\nI'm "}
         <Typewriter
           className="blinking-cursor text-purple-400 !font-bold"
-          baseTexts={texts}
+          baseTexts={["Tales Rocha.", "a programer.", "a developer."]}
           loop={true}
           typeSpeed={100}
           deleteSpeed={100}
