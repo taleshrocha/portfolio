@@ -1,6 +1,6 @@
 import TechBanner from "./TechBanner";
 import { languages, tools } from "@/assets/knowledge";
-import Carousel, { CarrouselItem } from "./Carousel";
+import Carousel, { CarouselItem } from "./Carousel";
 
 export default function Knowledge() {
   return (
@@ -24,7 +24,7 @@ export default function Knowledge() {
             time={1500}
           >
             {languages.map((language) => (
-              <CarrouselItem
+              <CarouselItem
                 key={language.name}
               >
                 <TechBanner
@@ -37,7 +37,7 @@ export default function Knowledge() {
                     size={100}
                   />
                 </TechBanner>
-              </CarrouselItem>
+              </CarouselItem>
             ))}
           </Carousel>
         </div>
@@ -50,13 +50,13 @@ export default function Knowledge() {
             time={2750}
           >
             {tools.map((tool) => (
-              <CarrouselItem
+              <CarouselItem
                 key={tool.name}
               >
                 <TechBanner key={tool.name} name={tool.name} link={tool.link}>
                   <tool.Icon className="h-14 w-14 md:h-28 md:w-28" size={100} />
                 </TechBanner>
-              </CarrouselItem>
+              </CarouselItem>
             ))}
           </Carousel>
         </div>

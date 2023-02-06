@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-export function CarrouselItem({ children, width, height }: any) {
+export function CarouselItem({ children, width, height }: any) {
   return (
     <div
         className="inline-flex items-center justify-center"

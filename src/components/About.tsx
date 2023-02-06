@@ -36,7 +36,7 @@ export default function About() {
             <Typewriter
               className="blinking-cursor text-sm md:text-base text-purple-400 !font-bold mb-1 md:mb-2"
               baseTexts={[
-                "I'm intolerant to lactose",
+                "I'm lactose intolerant",
                 "I'm reading GOT",
                 "I'm doing college",
                 "I'm Brazilian",
