@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from "react";
-import { AiOutlineArrowLeft as ArrowLeft, AiOutlineArrowRight as ArrowRight } from "react-icons/ai"
+import {
+  AiOutlineArrowLeft as ArrowLeft,
+  AiOutlineArrowRight as ArrowRight,
+} from "react-icons/ai";
 
 export function MenuCarouselItem({ children, width, height }: any) {
   return (
     <div
-      className="inline-flex items-center justify-center"
+      className="inline-flex items-center justify-center transition-transform 
+      hover:scale-105 ease-in-out duration-300 p-6"
       style={{ width: width, height: height }}
     >
       {children}
@@ -12,8 +16,12 @@ export function MenuCarouselItem({ children, width, height }: any) {
   );
 }
 
-// TODO: Add swipe "react-swipeable"
-export default function MenuCarousel({ children, time, className, descriptions }: any) {
+export default function MenuCarousel({
+  children,
+  time,
+  className,
+  descriptions,
+}: any) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
 
@@ -37,31 +45,49 @@ export default function MenuCarousel({ children, time, className, descriptions }
   return (
     <div
       className="
-        flex relative items-center overflow-hidden w-max
-        bg-gray-800 py-2 
+        flex flex-col xl:flex-row relative items-center justify-center overflow-hidden w-[800px] h-[440px]
+        md:w-full md:h-full
       "
     >
       {/*Mobile*/}
-      <div className="flex absolute inset-0 items-end justify-center text-gray-900 z-10 space-x-24 mb-16">
-        <button 
-          className="p-4 transition-colors duration-300 ease-out hover:bg-gray-600/50 rounded-full"
-          onClick={() => updateIndex(activeIndex + 1)}><ArrowLeft size={30}/></button>
-        <button 
-          className="p-4 transition-colors duration-300 ease-out hover:bg-gray-600/50 rounded-full"
-          onClick={() => updateIndex(activeIndex - 1)}><ArrowRight size={30} /></button>
-      </div>
+      <button
+        className="absolute bottom-8 left-72 z-10 md:hidden
+        text-gray-800 hover:bg-gray-600/50 rounded-full
+        p-4 transition-colors duration-300 ease-out "
+        onClick={() => updateIndex(activeIndex + 1)}
+      >
+        <ArrowLeft size={30} />
+      </button>
+      <button
+        className="absolute bottom-8 right-72 z-10 md:hidden
+        text-gray-800 hover:bg-gray-600/50 rounded-full
+        p-4 transition-colors duration-300 ease-out "
+        onClick={() => updateIndex(activeIndex + 1)}
+      >
+        <ArrowRight size={30} />
+      </button>
 
-      {/*Left side*/}
-      <div className="hidden md:flex flex-col z-10 justify-center space-x-2 bg-gray-800">
+      {/*Upper/Left side*/}
+      <div
+        className="hidden md:flex flex-col justify-center items-center 
+        h-full w-full z-10 mb-2 xl:bg-gray-900 xl:h-[440px]"
+      >
         {descriptions.map((description: any, index: any) => {
           return (
             <button
-              className={`${index === activeIndex && "bg-sky-500 text-white"}`}
+              className={`flex flex-col justify-center items-start w-full 
+                          transition-all duration-500 rounded-md p-2
+                          ${index === activeIndex && "bg-gray-800 hover:bg-transparent"}`}
               onClick={() => {
                 updateIndex(index);
               }}
             >
-              {description.name}
+              <h1 className="text-white font-bold">{index === activeIndex? "▼" : "▶"} {description.name}</h1>
+              <p
+                className={`ml-2 text-xm text-gray-200 
+                            ${index !== activeIndex && "hidden"}`}>
+                {description.desc}
+              </p>
             </button>
           );
         })}
@@ -78,7 +104,6 @@ export default function MenuCarousel({ children, time, className, descriptions }
           return React.cloneElement(child, { width: "100%" });
         })}
       </div>
-
     </div>
   );
 }

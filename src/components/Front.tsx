@@ -4,7 +4,7 @@ export default function Front() {
   let circles = [];
   for (let index = 0; index < 10; index++) {
     circles.push(
-      <li className=""></li>
+      <li key={index} className=""></li>
     );
   }
   return (

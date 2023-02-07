@@ -15,11 +15,11 @@ export default function Projects() {
         descriptions={[
           {
             name: "MoveIt",
-            desc: "A pomodoro tomato like aplicationexclamationBut, with physical challenges for the user 💪🏼 ",
+            desc: "A pomodoro app",
           },
           {
             name: "Instagram clone",
-            desc: "An Instagram camera clone app in which is possible to login, add posts, comments speech_balloon and likes heart ",
+            desc: "An Instagram clone",
           }
         ]}
       >
@@ -27,6 +27,7 @@ export default function Projects() {
           time={2000}
         >
           <Image
+            className="rounded-xl"
             src={moveitImg}
             alt=""
             width={800}
@@ -34,6 +35,7 @@ export default function Projects() {
         </MenuCarouselItem>
         <MenuCarouselItem>
           <Image
+            className="rounded-xl"
             src={instaImg}
             alt=""
             width={800}
