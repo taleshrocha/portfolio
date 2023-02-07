@@ -1,5 +1,7 @@
 import About from "@/components/About";
+import Footer from "@/components/Footer";
 import Front from "@/components/Front";
+import Further from "@/components/Further";
 import Header from "@/components/Header";
 import Knowledge from "@/components/Knowledge";
 import Projects from "@/components/Projects";
@@ -7,7 +9,7 @@ import Head from "next/head";
 
 export default function Home() {
   return (
-    <>
+    <div className="">
       <Head>
         <title>Portfolio</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,8 +23,10 @@ export default function Home() {
 
         <About />
         <Knowledge />
-        <Projects/>
+        <Projects />
+        <Further />
+        <Footer />
       </main>
-    </>
+    </div>
   );
 }

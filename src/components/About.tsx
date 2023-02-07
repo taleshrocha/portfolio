@@ -2,7 +2,7 @@ import Typewriter from "./Typewriter";
 
 export default function About() {
   return (
-    <section className="section">
+    <section className="section pt-24">
 
       <img
         className="rounded-full w-44 md:w-52 border-2 border-sky-700"

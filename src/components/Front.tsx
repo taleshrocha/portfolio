@@ -11,7 +11,7 @@ export default function Front() {
     <div
       className="
         flex sticky top-0 z-0 items-center justify-center
-        bg-gradient-to-t from-cyan-500 to-blue-500 
+        bg-gradient-to-t from-[#182e6e] to-[#1e3a8a]
         w-full h-screen pt-24 
       "
     >
