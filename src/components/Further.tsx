@@ -3,7 +3,7 @@ import Image from "next/image";
 
 export default function Further() {
   return (
-    <section className="section p-0 pb-10 md:pb-0 bg-gray-800">
+    <section id="Further" className="section p-0 pb-10 md:pb-0 bg-gray-800">
         <Image
         className="md:w-[50vw]"
           width={2000}

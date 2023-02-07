@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export default function Projects() {
   return (
-    <section className="section !flex-col">
+    <section id="Projects" className="section !flex-col">
       <div className="section-div">
         <h1 className="section-title">My work</h1>
         <p className="section-content">

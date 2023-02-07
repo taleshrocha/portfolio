@@ -1,8 +1,9 @@
+import Link from "next/link";
 import Typewriter from "./Typewriter";
 
 export default function About() {
   return (
-    <section className="section pt-24">
+    <section id="About" className="section pt-24">
 
       <img
         className="rounded-full w-44 md:w-52 border-2 border-sky-700"
@@ -17,11 +18,13 @@ export default function About() {
           I'm Tales Rocha, a passionate programer actually living in Brazil. I
           study programing since 2020 and I'm interested in all about Front and
           Back-end web development. I'm also an undergraduate in IT at{" "}
-          <a
+          <Link
             className="underline text-blue-400 hover:text-purple-400"
-            href="https://www.metropoledigital.ufrn.br/portal/institucional/sobreimd">
+            href="https://www.metropoledigital.ufrn.br/portal/institucional/sobreimd"
+            target="_blank"
+          >
             IMD
-          </a>
+          </Link>
           .
         </p>
         {/*Fun Fact*/}

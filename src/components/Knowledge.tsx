@@ -4,7 +4,7 @@ import Carousel, { CarouselItem } from "./Carousel";
 
 export default function Knowledge() {
   return (
-    <section className="section !flex-col bg-gray-800">
+    <section id="Knowledge" className="section !flex-col bg-gray-800">
       <div className="section-div">
         <h1 className="section-title">How can I help you?</h1>
         <p className="section-content">
