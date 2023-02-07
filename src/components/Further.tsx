@@ -13,9 +13,10 @@ export default function Further() {
       <div className="section-div px-6 md:w-[50vw]">
         <h1 className="section-title">Let's go further!</h1>
         <p className="section-content">
-          I'm Tales Rocha, a passionate programer actually living in Brazil. I
-          study programing since 2020 and I'm interested in all about Front and
-          Back-end web development. I'm also an undergraduate in IT at{" "}
+        Liked what you saw? Then you can see the source code of this responsive 
+        and interactive portfolio here. Also, you can message me via 
+        email: taleshrochaz@gmail.com. <br/>
+        For more information, you can check out my resume.
         </p>
       </div>
     </section>
