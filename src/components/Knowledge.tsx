@@ -30,7 +30,6 @@ export default function Knowledge() {
                 <TechBanner
                   key={language.name}
                   name={language.name}
-                  link={language.link}
                 >
                   <language.Icon
                     className="h-14 w-14 md:h-28 md:w-28"
@@ -53,7 +52,7 @@ export default function Knowledge() {
               <CarouselItem
                 key={tool.name}
               >
-                <TechBanner key={tool.name} name={tool.name} link={tool.link}>
+                <TechBanner key={tool.name} name={tool.name}>
                   <tool.Icon className="h-14 w-14 md:h-28 md:w-28" size={100} />
                 </TechBanner>
               </CarouselItem>

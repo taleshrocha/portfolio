@@ -13,7 +13,7 @@ export default function Header() {
       bg-black/50 backdrop-blur-lg text-white
       transition-all duration-300 ease-in-out
       w-screen flex-col
-      ${isOpen && "h-20"}
+      ${isOpen && "h-24"}
       h-8 text-sm px-4 
       md:h-12 md:text-base 
       `}

@@ -6,7 +6,7 @@ export default function About() {
     <section id="About" className="section pt-24">
 
       <img
-        className="rounded-full w-44 md:w-52 border-2 border-sky-700"
+        className="rounded-full w-44 md:w-52 border-2 border-blue-400"
         src="https://avatars.githubusercontent.com/u/61332391?v=4"
         alt=""
       />
@@ -19,7 +19,7 @@ export default function About() {
           study programing since 2020 and I'm interested in all about Front and
           Back-end web development. I'm also an undergraduate in IT at{" "}
           <Link
-            className="underline text-blue-400 hover:text-purple-400"
+            className="hover:underline text-blue-400 hover:text-purple-400"
             href="https://www.metropoledigital.ufrn.br/portal/institucional/sobreimd"
             target="_blank"
           >
@@ -37,7 +37,7 @@ export default function About() {
               Fun fact
             </h1>
             <Typewriter
-              className="blinking-cursor text-sm md:text-base text-purple-400 !font-bold mb-1 md:mb-2"
+              className="typewriter text-sm md:text-base mb-1 md:mb-2"
               baseTexts={[
                 "I'm lactose intolerant",
                 "I'm reading GOT",

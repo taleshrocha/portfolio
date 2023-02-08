@@ -1,13 +1,15 @@
 import React, { useEffect, useState } from "react";
 
-export function CarouselItem({ children, width, height }: any) {
+export function CarouselItem({ children, width, height, onClick }: any) {
   return (
-    <div
-        className="inline-flex items-center justify-center"
+    <button
+        className={`inline-flex items-center justify-center
+        transition-transform ease-in hover:scale-105`}
       style={{ width: width, height: height}}
+      onClick={onClick}
     >
       {children}
-    </div>
+    </button>
   );
 }
 
@@ -49,19 +51,17 @@ export default function Carousel({ children, time, className }: CarouselProps) {
         className="whitespace-nowrap transition-transform duration-700"
         style={{ transform: `translateX(-${activeIndex * 100}%)` }}
       >
-        {React.Children.map(children, (child, index) => {
-          return React.cloneElement(child, { width: "100%" });
+        {React.Children.map(children, (child) => {
+          return React.cloneElement(child, { width: "100%", onClick: () => updateIndex(activeIndex + 1)});
         })}
       </div>
       <div className="flex justify-center space-x-2 hidden">
         <button
-          onClick={() => {
-            updateIndex(activeIndex - 1);
-          }}
+          onClick={() => {updateIndex(activeIndex - 1)}}
         >
           Prev
         </button>
-        {React.Children.map(children, (child, index) => {
+        {React.Children.map(children, (index) => {
           return (
             <button
               className={`${index === activeIndex && "bg-sky-500 text-white"}`}

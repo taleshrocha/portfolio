@@ -70,11 +70,12 @@ export default function MenuCarousel({
       {/*Upper/Left side*/}
       <div
         className="hidden md:flex flex-col justify-center items-center 
-        h-full w-full z-10 mb-2 xl:bg-gray-900 xl:h-[440px]"
+        h-full w-full z-10 mb-2 xl:bg-gray-900 xl:h-[500px]"
       >
         {descriptions.map((description: any, index: any) => {
           return (
             <button
+              key={index}
               className={`flex flex-col justify-center items-start w-full 
                           transition-all duration-500 rounded-md p-2
                           ${index === activeIndex && "bg-gray-800 hover:bg-transparent"}`}

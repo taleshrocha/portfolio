@@ -13,7 +13,7 @@ export default function Footer() {
   return (
     <div
       className="flex relative flex-col justify-center items-center h-[50vh]
-        bg-gradient-to-t from-[#060c1c] to-[#091129] overflow-hidden"
+        bg-gradient-to-t from-[#060c1c] to-[#0f1d45] overflow-hidden"
     >
       <div className="flex flex-col sm:flex-row justify-between items-center w-2/3
         text-lg text-white  z-10 border-y p-8 space-y-4 sm:space-y-0">

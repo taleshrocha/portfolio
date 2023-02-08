@@ -11,7 +11,7 @@ export default function Front() {
     <div
       className="
         flex sticky top-0 z-0 items-center justify-center
-        bg-gradient-to-t from-[#182e6e] to-[#1e3a8a]
+        bg-gradient-to-t from-[#0c1737] to-[#182e6e]
         w-full h-screen pt-24 
       "
     >
@@ -23,9 +23,9 @@ export default function Front() {
           md:text-7xl 
         "
       >
-        {"Hello world!\nI'm "}
+        {"Hello, world!\nI'm "}
         <Typewriter
-          className="blinking-cursor text-purple-400 !font-bold break-all"
+          className="typewriter"
           baseTexts={["Tales Rocha.", "a programer.", "a developer."]}
           loop={true}
           typeSpeed={100}
