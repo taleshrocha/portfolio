@@ -21,15 +21,16 @@ export default function Further() {
           >
             GitHub{" "}
           </a>{" "}
-          and see the source code of this responsive and interactive portfolio{" "}
+          and see{" "}
           <a
             className="text-blue-400 hover:text-purple-400 hover:underline"
             href="https://github.com/taleshrocha/portfolio"
             target="_blank"
           >
-            here
-          </a>
-          . Also, you can message me via email:{" "}
+            the source code
+          </a>{" "}
+          of this responsive and interactive portfolio. Also, you can message me
+          via email:{" "}
           <a
             className="text-blue-400 hover:text-purple-400 hover:underline"
             href="mailto:taleshrochaz@gmail.com?subject=Let's talk!"

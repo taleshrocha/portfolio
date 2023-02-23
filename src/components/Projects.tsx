@@ -3,6 +3,7 @@ import moveitImg from "@/assets/moveit.png";
 import instaImg from "@/assets/instagram.png";
 import mediumImg from "@/assets/medium.png";
 import esportsImg from "@/assets/esports.png";
+import fakenewsImg from "@/assets/fakenews.png";
 import Image from "next/image";
 
 export default function Projects() {
@@ -20,19 +21,23 @@ export default function Projects() {
         descriptions={[
           {
             name: "MoveIt",
-            desc: "A pomodoro app.",
+            desc: "A pomodoro app",
           },
           {
             name: "Instagram clone",
-            desc: "An Instagram clone.",
+            desc: "An Instagram clone",
+          },
+          {
+            name: "Fake News Detector",
+            desc: "An app to detect Fake News",
           },
           {
             name: "Medium like app",
-            desc: "A Medium clone.",
+            desc: "A Medium clone",
           },
           {
             name: "Esports",
-            desc: "An app to online game matching.",
+            desc: "An app to online game matching",
           },
         ]}
       >
@@ -41,6 +46,9 @@ export default function Projects() {
         </MenuCarouselItem>
         <MenuCarouselItem>
           <Image className="rounded-xl" src={instaImg} alt="" width={800} />
+        </MenuCarouselItem>
+        <MenuCarouselItem>
+          <Image className="rounded-xl" src={fakenewsImg} alt="" width={800} />
         </MenuCarouselItem>
         <MenuCarouselItem>
           <Image className="rounded-xl" src={mediumImg} alt="" width={800} />
