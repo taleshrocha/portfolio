@@ -3,6 +3,10 @@ import {
   AiOutlineArrowLeft as ArrowLeft,
   AiOutlineArrowRight as ArrowRight,
 } from "react-icons/ai";
+import {
+  GoTriangleRight as TriagleRight,
+  GoTriangleDown as TriagleDown,
+} from "react-icons/go";
 
 export function MenuCarouselItem({ children, width, height }: any) {
   return (
@@ -83,9 +87,9 @@ export default function MenuCarousel({
                 updateIndex(index);
               }}
             >
-              <h1 className="text-white font-bold">{index === activeIndex? "▼" : "▶"} {description.name}</h1>
+              <h1 className="flex justify-center items-center text-white font-bold whitespace-pre">{index === activeIndex ? <TriagleDown /> : <TriagleRight />} {description.name}</h1>
               <p
-                className={`ml-2 text-xm text-gray-200 
+                className={`ml-5 text-xm text-gray-200 
                             ${index !== activeIndex && "hidden"}`}>
                 {description.desc}
               </p>
